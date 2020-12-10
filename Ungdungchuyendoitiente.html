@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <script src="tiente.js"></script>
+</head>
+<body>
+<form>
+<label style="  font-size: 50px;margin-left: 50px">Amount</label>
+<label style="  font-size: 50px;margin-left: 300px">Form Currency</label>
+<label style="  font-size: 50px;margin-left: 200px">To Currency</label>
+<br>
+<input style="  width: 300px; heigh: 20px" type="text" id="amount">
+<select style="  margin-left: 200px; width: 300px; height: 30px" id="test1">
+    <option value="0">VIET NAM</option>
+    <option value="1">American"</option>
+</select>
+<select style="margin-left: 200px; width: 300px; height: 30px" id="test2">
+    <option value="0">USD</option>
+    <option value="1">VND</option>
+</select>
+<input style="background: lightblue;color: white;width: 300px; height: 30px" type="button" id="bt" value="convert" onlick="check()">
+<br>The Converted Amount is:<br>
+<input style="  width: 300px; height: 30px" type="text" id="in">
+</form>
+
+
+</body>
+</html>
