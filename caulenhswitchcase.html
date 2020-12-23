@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh switch-case</title>
+</head>
+<body>
+<input type="number" min="1" max="12" name="month" id="month">
+<input type="button" value="Tính số ngày" onclick="alert(Day())">
+<script>
+    function Day() {
+        let month = document.getElementById("month").value;
+        switch (month) {
+            case "1":
+            case "3":
+            case "5":
+            case "7":
+            case "8":
+            case "10":
+            case "12":
+                return "31 ngày";
+            case "4":
+            case "6":
+            case "9":
+            case "11":
+                return "30 ngày";
+            case "2":
+                return "29 hoặc 30 ngày";
+            default: {
+                return "nhập không hợp lệ";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

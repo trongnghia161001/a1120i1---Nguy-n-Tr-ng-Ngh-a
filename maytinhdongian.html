@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"> <input id="result" type="text"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" name="btn" onclick="result.value+=this.value"></td>
+        <td><input type="button" value="2" name="btn" onclick="result.value+=this.value"></td>
+        <td><input type="button" value="3" name="btn" onclick="result.value+=this.value"></td>
+        <td><input type="button" value="+" name="btn" onclick="result.value+=this.value"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" name="btn" onclick="result.value+=this.value"></td>
+        <td><input type="button" value="5" name="btn" onclick="result.value+=this.value"></td>
+        <td><input type="button" value="6" name="btn" onclick="result.value+=this.value"></td>
+        <td><input type="button" value="-" name="btn" onclick="result.value+=this.value"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" name="btn" onclick="result.value+=this.value"></td>
+        <td><input type="button" value="8" name="btn" onclick="result.value+=this.value"></td>
+        <td><input type="button" value="9" name="btn" onclick="result.value+=this.value"></td>
+        <td><input type="button" value="*" name="btn" onclick="result.value+=this.value"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="C" name="btn" onclick="result.value = ' ' "></td>
+        <td><input type="button" value="0" name="btn" onclick="result.value+=this.value"></td>
+        <td><input type="button" value="=" name="btn" onclick="alert(eval(result.value))"></td>
+        <td><input type="button" value="/" name="btn" onclick="result.value+=this.value"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lập 01</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("number"));
+    let a = 0
+    let c;
+    let b = 1;
+    for (let i = 0; i < n; i++) {
+        if (i <= 1) {
+            document.write(i);
+        } else {
+            c = a + b;
+            a = b;
+            b = c;
+            document.write(c);
+        }
+        document.write("</br>")
+    }
+</script>
+</body>
+</html>

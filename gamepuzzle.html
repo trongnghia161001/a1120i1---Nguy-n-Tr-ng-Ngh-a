@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<h1 style="color: crimson; margin-left:15cm">Do you love me?</h1>
+<input style="color: deeppink; margin-left: 17cm" type="button" value="YES" name="YES" id="YES" onclick="clickYES()">
+<input style="color: deeppink" type="button" value="NO" name="NO" id="NO" onmouseover="clickNO()">
+<script>
+    function clickYES() {
+        document.getElementById("YES")
+        document.write('<img src="traitim.jpg" style="margin-left: 17cm">');
+    }
+    function clickNO() {
+        let x = Math.round(Math.random() * window.innerHeight);
+        document.getElementById("NO").style.margin= x + "cm";
+    }
+</script>
+</body>
+</html>

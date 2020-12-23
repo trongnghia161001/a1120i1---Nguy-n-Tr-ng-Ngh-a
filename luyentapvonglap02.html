@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 02</title>
+</head>
+<body>
+<script>
+    /*let n = 5;
+    for (let k = 1; k <= 5; k++) {
+        for (let j = 1; j <= k; j++) {
+            document.write("&nbsp&nbsp");
+        }
+        for (let j = 5; j >= k; j--) {
+            document.write("*");
+        }
+        document.write("</br>")
+    }
+     */
+    let i, j;
+    for (i = 1; i < 7; i++) {
+        for (j = 1; j <= 7; j++) {
+            if (!((i == 1 && ((j == 1) || (j == 4) || (j == 7))) || (i == 4 && ((j == 1) || (j == 7))) ||
+                (i == 5 && ((j == 1) || (j == 2) || (j == 6) || (j == 7))) ||
+                (i == 6 && ((j == 1) || (j == 2) || (j == 3) || (j == 5) || (j == 6) || (j == 7))))) {
+                document.write(" * ");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("</br>")
+    }
+</script>
+</body>
+</html>
