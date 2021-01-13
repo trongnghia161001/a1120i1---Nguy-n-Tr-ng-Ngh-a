@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+        Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc
+        và bóng đèn
+    </title>
+</head>
+<body>
+<script>
+    console.log("Load script... ");
+    class SwitchButton {
+        constructor(status = false, lamp) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        connectToLamp(electricLamp) {
+            this.lamp = electricLamp;
+        }
+
+        switchOff() {
+            if (this.status) {
+                this.status = false;
+                this.lamp.turnOff();
+            }
+        }
+
+        switchOn() {
+            if (!this.status) {
+                this.status = true;
+                this.lamp.turnOn();
+            }
+        }
+    }
+
+    class ElectricLamp {
+        constructor(status = false) {
+            this.status = status;
+        }
+
+        turnOff() {
+            this.status = false;
+        }
+
+        turnOn() {
+            this.status = true;
+        }
+    }
+
+    let lamp = new ElectricLamp();
+    let switchButton = new SwitchButton(false, lamp);
+
+    const setLamp = status => {
+        return `<img src="./image/${status}.png" alt="lamp" style="width: 50px; height:50px">`;
+    };
+
+    const update = () => {
+        let temp = switchButton.status ? "off" : "on";
+        document.getElementById("lamp").innerHTML = setLamp(temp);
+        temp === "off" ? switchButton.switchOff() : switchButton.switchOn();
+    };
+
+    let i = 0;
+    let interval = setInterval(() => {
+        document.getElementById("clickButton").click();
+        i++;
+        if (i === 10) {
+            clearInterval(interval);
+        }
+    }, 1000);
+</script>
+<div id="lamp">
+    <img src="./image/off.png" alt="lamp" style="width: 50px; height:50px">
+</div>
+<button onclick="update();" id="clickButton">Click !</button>
+</body>
+</html>
